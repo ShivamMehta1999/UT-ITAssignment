@@ -9,16 +9,16 @@ class EmailValidatorTest extends AnyFunSuite{
   }
 
   test("Email is not valid if it not contains @ character"){
-    assert(!emailValidator.emailIdIsValid("@UtkarshAmbastha.rsd.gmail.com"))
+    assert(!emailValidator.emailIdIsValid("@shivammehta.rsd.gmail.com"))
   }
 
   test("Email should be invalid if it doesn't contain domain name"){
-    assert(!emailValidator.emailIdIsValid("UtkarshAmbastha@"))
+    assert(!emailValidator.emailIdIsValid("ShivamMehta@"))
   }
   test("Email should not valid if it doesn't contain .com,.org, or .net"){
-    assert(!emailValidator.emailIdIsValid("utkarsh@gmail"))
+    assert(!emailValidator.emailIdIsValid("shivam@gmail"))
   }
   test("Email should valid if it contani all required parameters"){
-    assert(emailValidator.emailIdIsValid("utkarsh.ambastha@gmail.com"))
+    assert(emailValidator.emailIdIsValid("shivam.mehta@gmail.com"))
   }
 }

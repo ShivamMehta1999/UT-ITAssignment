@@ -14,14 +14,14 @@ class EmployeeImplIntegrationTest extends AnyFunSuite {
   val employeeImpl = new EmployeeImpl(employeeValidator)
 
   test("User cannot be created because company does not exist"){
-    val lucifer: Employee = new Employee("Lucifer", "MorningStar", 22, 10000, "Intern", "GoldMan Sachs", "lucifer.morningstar@gmail.com")
+    val lucifer: Employee = new Employee("Lucifer", "MorningStar", 22, 10000, "Intern", "GoldMan Sachs", "lucifer.morningstar@gmalcom")
     val result = employeeImpl.createEmployee(lucifer)
     assert(result.isEmpty)
   }
 
   test("User not created because email is invalid"){
-    val Utkarsh: Employee = new Employee("Utkarsh", "Ambastha", 22, 15000, "Intern", "Knoldus", "utkarsh.ambastha@gmailcom")
-    val result = employeeImpl.createEmployee(Utkarsh)
+    val Shivam: Employee = new Employee("Shivam", "Mehta", 22, 12000, "Intern", "Knoldus", "shivam.mehta@gmailcom")
+    val result = employeeImpl.createEmployee(Shivam)
     assert(result.isEmpty)
   }
 
@@ -32,8 +32,8 @@ class EmployeeImplIntegrationTest extends AnyFunSuite {
   }
 
   test("User can be created"){
-    val Utkarsh: Employee = new Employee("Utkarsh", "Ambastha", 22, 15000, "Intern", "Knoldus", "utkarsh.ambastha@gmail.com")
-    val result = employeeImpl.createEmployee(Utkarsh)
+    val Shivam: Employee = new Employee("Shivam", "Mehta", 22, 1000, "Intern", "Knoldus", "utkarsh.ambastha@gmail.com")
+    val result = employeeImpl.createEmployee(Shivam)
     assert(result.isDefined)
   }
 

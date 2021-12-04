@@ -7,7 +7,7 @@ import org.scalatest.funsuite.AnyFunSuite
 
 class EmployeeValidatorTest extends AnyFunSuite {
 
-  val employee = new Employee("Utkarsh","Ambastha",22,15000,"Intern","knoldus","utkarsh.ambastha@knoldus.com")
+  val employee = new Employee("Shivam","Mehta",22,12000,"Intern","knoldus","shivam.mehta@gmailcom")
   val knoldusCompany: Company = Company("Knoldus", "knoldus@gmail.com", "Noida")
   val companyRead = mock[CompanyReadTo]
   val emailValidator = mock[EmailValidator]
