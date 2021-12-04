@@ -32,7 +32,7 @@ class EmployeeImplIntegrationTest extends AnyFunSuite {
   }
 
   test("User can be created"){
-    val Shivam: Employee = new Employee("Shivam", "Mehta", 22, 1000, "Intern", "Knoldus", "utkarsh.ambastha@gmail.com")
+    val Shivam: Employee = new Employee("Shivam", "Mehta", 22, 1000, "Intern", "Knoldus", "shivam.mehta@gmail.com")
     val result = employeeImpl.createEmployee(Shivam)
     assert(result.isDefined)
   }
